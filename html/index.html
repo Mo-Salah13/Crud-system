@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C.R.U.D</title>
+    <link rel="shortcut icon" href="../image/crud_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1 class="text-center">Simple <span class="text-success">C</span>.<span>R</span>.<span class="text-info">U</span>.<span class="text-danger">D</span> System</h1>
+    <div class="container border rounded-4 my-3 bg-black pt-3">
+        <form>
+            <div class="mb-3">
+                <label for="productName" class="fw-bolder text-secondary">Product <span class="text-danger"> Name </span></label>
+                <input type="text" id="productName" class="form-control">
+                <div class="alert alert-danger d-none mt-1 p-1" id="nameAlert">Must be letters</div>
+            </div>
+            <div class="mb-3">
+                <label for="productPrice" class="fw-bolder text-secondary">Product <span class="text-danger"> Price </span></label>
+                <input type="text" id="productPrice" class="form-control">
+                <div class="alert alert-danger d-none mt-1 p-1" id="priceAlert">Must be Numbers</div>
+            </div>
+            <div class="mb-3">
+                <label for="productCate" class="fw-bolder text-secondary">Product <span class="text-danger"> Category</span></label>
+                <select id="productCate" class="form-select-sm">
+                  <option value="TV">Tv</option>
+                  <option value="mobile">Mobile</option>
+                  <option value="Laptop">Lap Top</option>
+                  <option value="computer">PC</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="producDesc" class="fw-bolder text-secondary">Product <span class="text-danger"> Description </span></label>
+                <input type="text" id="productDesc" class="form-control">
+            </div>
+            <button type="button" onclick="addProduct()" class="btn btn-outline-success d-block fw-bold mb-2" id="addBtn"><i class="fa-solid fa-cart-plus"></i> Add Product</button>
+            <button type="button" onclick="newUpdate()" class="btn btn-outline-info d-none fw-bold mb-2" id="updateBtn"><i class="fa-regular fa-pen-to-square"></i> Update</button>
+        </form>
+        <input onkeyup="search()" type="search" id="searchOutPut" class="form-control w-25 mx-auto mb-3" placeholder="Search...">
+        <table class="table table-bordered text-center table-striped table-dark">
+            <thead class="border">
+                <th class="text-danger">#</th>
+                <th >Name</th>
+                <th >Price</th>
+                <th >Category</th>
+                <th >Description</th>
+                <th >Update</th>
+                <th >Delete</th>
+            </thead>
+            <tbody id="display">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
